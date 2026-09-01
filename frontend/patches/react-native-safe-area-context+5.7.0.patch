@@ -1,0 +1,45 @@
+diff --git a/node_modules/react-native-safe-area-context/lib/commonjs/NativeSafeAreaProvider.web.js b/node_modules/react-native-safe-area-context/lib/commonjs/NativeSafeAreaProvider.web.js
+index dcf0423..cc8dfad 100644
+--- a/node_modules/react-native-safe-area-context/lib/commonjs/NativeSafeAreaProvider.web.js
++++ b/node_modules/react-native-safe-area-context/lib/commonjs/NativeSafeAreaProvider.web.js
+@@ -66,7 +66,9 @@ function NativeSafeAreaProvider({
+     element.addEventListener(getSupportedTransitionEvent(), onEnd);
+     onEnd();
+     return () => {
+-      document.body.removeChild(element);
++      if (element.parentNode) {
++        element.parentNode.removeChild(element);
++      }
+       element.removeEventListener(getSupportedTransitionEvent(), onEnd);
+     };
+   }, [onInsetsChange]);
+diff --git a/node_modules/react-native-safe-area-context/lib/module/NativeSafeAreaProvider.web.js b/node_modules/react-native-safe-area-context/lib/module/NativeSafeAreaProvider.web.js
+index 7f75c72..1df09fc 100644
+--- a/node_modules/react-native-safe-area-context/lib/module/NativeSafeAreaProvider.web.js
++++ b/node_modules/react-native-safe-area-context/lib/module/NativeSafeAreaProvider.web.js
+@@ -59,7 +59,9 @@ export function NativeSafeAreaProvider({
+     element.addEventListener(getSupportedTransitionEvent(), onEnd);
+     onEnd();
+     return () => {
+-      document.body.removeChild(element);
++      if (element.parentNode) {
++        element.parentNode.removeChild(element);
++      }
+       element.removeEventListener(getSupportedTransitionEvent(), onEnd);
+     };
+   }, [onInsetsChange]);
+diff --git a/node_modules/react-native-safe-area-context/src/NativeSafeAreaProvider.web.tsx b/node_modules/react-native-safe-area-context/src/NativeSafeAreaProvider.web.tsx
+index d3eceed..4c08809 100644
+--- a/node_modules/react-native-safe-area-context/src/NativeSafeAreaProvider.web.tsx
++++ b/node_modules/react-native-safe-area-context/src/NativeSafeAreaProvider.web.tsx
+@@ -55,7 +55,9 @@ export function NativeSafeAreaProvider({
+     element.addEventListener(getSupportedTransitionEvent(), onEnd);
+     onEnd();
+     return () => {
+-      document.body.removeChild(element);
++      if (element.parentNode) {
++        element.parentNode.removeChild(element);
++      }
+       element.removeEventListener(getSupportedTransitionEvent(), onEnd);
+     };
+   }, [onInsetsChange]);

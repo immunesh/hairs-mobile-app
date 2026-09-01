@@ -1,0 +1,15 @@
+{
+  "name": "hairsup-app-monorepo",
+  "version": "1.0.0",
+  "description": "Monorepo to run HairsUp App Frontend, Backend, and Admin concurrently",
+  "scripts": {
+    "install:all": "npm install --prefix backend && npm install --prefix admin && npm install --prefix frontend",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:admin": "npm run dev --prefix admin",
+    "dev:frontend": "npm run web --prefix frontend",
+    "dev": "concurrently --kill-others -n \"BACKEND,ADMIN,FRONTEND\" -c \"cyan,magenta,blue\" \"npm run dev:backend\" \"npm run dev:admin\" \"npm run dev:frontend\""
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "/not-found": "app/not-found.js",
+  "/admin/page": "app/admin/page.js",
+  "/admin/login/page": "app/admin/login/page.js",
+  "/admin/products/page": "app/admin/products/page.js",
+  "/admin/categories/page": "app/admin/categories/page.js",
+  "/admin/users/page": "app/admin/users/page.js",
+  "/admin/wishlist/page": "app/admin/wishlist/page.js",
+  "/admin/carts/page": "app/admin/carts/page.js",
+  "/admin/orders/page": "app/admin/orders/page.js",
+  "/admin/reviews/page": "app/admin/reviews/page.js",
+  "/admin/coupons/page": "app/admin/coupons/page.js"
+}

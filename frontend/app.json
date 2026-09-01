@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "HairsUp",
+    "slug": "hairsup",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#2B0A45",
+    "ios": {
+      "supportsTablet": true,
+      "backgroundColor": "#2B0A45"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#2B0A45",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
