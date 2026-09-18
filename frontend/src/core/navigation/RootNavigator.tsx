@@ -16,6 +16,8 @@ import { WishlistScreen } from "@/screens/Account/WishlistScreen";
 import { CheckoutScreen } from "@/screens/Cart/CheckoutScreen";
 import { OrderConfirmedScreen } from "@/screens/Cart/OrderConfirmedScreen";
 import { OrderTrackingScreen } from "@/screens/Cart/OrderTrackingScreen";
+import { BlogListScreen } from "@/screens/BlogList/BlogListScreen";
+import { BlogDetailScreen } from "@/screens/BlogDetail/BlogDetailScreen";
 import { MainTabNavigator } from "./MainTabNavigator";
 import type { RootStackParamList } from "./types";
 
@@ -41,6 +43,8 @@ export function RootNavigator() {
         <Stack.Screen name="OrderTracking" component={OrderTrackingScreen} />
         <Stack.Screen name="ProductDetail" component={ProductDetailScreen} />
         <Stack.Screen name="ProductList" component={ProductListScreen} />
+        <Stack.Screen name="BlogList" component={BlogListScreen} />
+        <Stack.Screen name="BlogDetail" component={BlogDetailScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

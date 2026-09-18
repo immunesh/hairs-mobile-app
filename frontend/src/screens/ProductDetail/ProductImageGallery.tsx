@@ -186,10 +186,7 @@ export function ProductImageGallery({ images }: Props) {
                 <View style={[styles.rotationImage, styles.placeholder]} />
               )}
 
-              {/* Angle HUD Badge */}
-              <View style={styles.angleHud}>
-                <Text style={styles.angleHudText}>{displayAngle}</Text>
-              </View>
+
             </View>
 
             {/* Instruction Banner */}
